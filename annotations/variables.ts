@@ -32,6 +32,36 @@ let point: { x: number; y: number } = {
 // 3
 
 // Function
-const logNumber = (i: number) => {
+const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+// When to use annotations
+
+// 1. Function that returns any type
+const json = '{"x": 10, "y":20}';
+// added type annotations to coordinates
+const coordinates: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates);
+
+// 2. When we declare a var on one line but initialize it later
+let words = ["red", "green", "blue"];
+// added type annotation; can be writen as "let foundWord = false;"
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === "green") {
+    foundWord = true;
+  }
+}
+
+// 3. When type cannot be easily inferred correctly
+let numbers = [-10, -12, 3];
+// added in an annotation of boolean OR number because TS cannot distinguish
+let numberAboveZero: boolean | number;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
