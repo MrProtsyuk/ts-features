@@ -16,3 +16,12 @@ function divide(a: number, b: number): number {
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
+
+// void and never, only use never when you NEVER expect anything from the func
+const logger = (message: string): void => {
+  console.log(message);
+};
+
+const throwErr = (message: string): never => {
+  throw new Error(message);
+};
