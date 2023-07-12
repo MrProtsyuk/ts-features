@@ -1,4 +1,4 @@
-// 1
+// ------ 1
 
 // colon tells TS that the variable apple will only ever use a number type
 let apples: number = 5;
@@ -12,7 +12,7 @@ let nothing: undefined = undefined;
 // built in objects
 let now: Date = new Date();
 
-// 2
+// ------ 2
 
 // Array; first brackets are not the array, they tell typescript that this value is going to be an array. Hence the second brackets with the colors inside
 let colors: string[] = ["red", "green", "blue"];
@@ -29,7 +29,7 @@ let point: { x: number; y: number } = {
   y: 23,
 };
 
-// 3
+// ------ 3
 
 // Function
 const logNumber: (i: number) => void = (i: number) => {
