@@ -25,3 +25,22 @@ const logger = (message: string): void => {
 const throwErr = (message: string): never => {
   throw new Error(message);
 };
+
+// destructuring an object with typescript and keeping annotations
+const forecast = {
+  date: new Date(),
+  weather: "Sunny",
+};
+
+const logWeather = ({
+  date,
+  weather,
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(forecast);
