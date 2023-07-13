@@ -8,7 +8,11 @@ class Vehicle {
   }
 }
 
+// it takes all the methods of vehicle and adds them to car
+// this is called inheritanceS
+class Car extends Vehicle {}
+
 // creating a new variable with the class
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+const carr = new Car();
+carr.drive();
+carr.honk();
