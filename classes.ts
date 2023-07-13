@@ -17,6 +17,10 @@ class Vehicle {
 // it takes all the methods of vehicle and adds them to car
 // this is called inheritanceS
 class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+
   // this will change the inherited value
   // private resticts the different methods that devs can call
   private drive(): void {
@@ -30,6 +34,6 @@ class Car extends Vehicle {
 }
 
 // creating a new variable with the class
-// providing an argument for color
-const carr = new Car("orange");
+// providing an argument for color and wheels
+const carr = new Car(4, "red");
 carr.startDrivingProcess();
