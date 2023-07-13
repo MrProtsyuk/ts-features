@@ -1,6 +1,6 @@
 // creating an interface for our vehicles
 // you are not restricted to primitive types
-interface Vehicle {
+interface Vehiclee {
   name: string;
   year: number;
   broken: boolean;
@@ -28,7 +28,7 @@ const soda = {
 };
 
 // intead of passing in all the different types, we can pass in our interface instead and it helps keep things clean
-const printVehicle = (vehicle: Vehicle): void => {
+const printVehicle = (vehicle: Vehiclee): void => {
   console.log(vehicle.summary());
 };
 
